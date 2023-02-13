@@ -5,7 +5,7 @@ Summary:	Build backend for CMake based projects
 
 License:	ASL 2.0
 URL:		https://github.com/scikit-build/scikit-build-core
-Source0:	%{pypi_source scikit-build-core}
+Source0:	%{pypi_source scikit_build_core}
 
 BuildArch:	    noarch
 BuildRequires:	python3-devel
