@@ -1,4 +1,6 @@
+# TODO: temporarily build from forgeurl
 %global forgeurl https://github.com/scikit-build/scikit-build-core
+%global branch main
 
 Name:		    pyhton-scikit-build-core
 Version:	    0.1.6
@@ -18,8 +20,6 @@ BuildRequires:  cmake
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
 Requires:       cmake
-# TODO: Removed in 0.1.7
-Requires:	    python3dist(distlib)
 Requires:	    python3dist(pyproject-metadata)
 Requires:	    python3dist(pathspec)
 
