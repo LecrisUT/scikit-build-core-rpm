@@ -1,11 +1,14 @@
+%global forgeurl https://github.com/scikit-build/scikit-build-core
+
 Name:		    pyhton-scikit-build-core
 Version:	    0.1.6
 Release:        1%{?dist}
 Summary:	    Build backend for CMake based projects
+%forgemeta
 
 License:	    ASL 2.0
-URL:		    https://github.com/scikit-build/scikit-build-core
-Source0:	    %{pypi_source scikit_build_core}
+URL:		    %{forgeurl}
+Source0:	    %{forgesource}
 
 BuildArch:	    noarch
 BuildRequires:	python3-devel
@@ -30,7 +33,7 @@ Summary:	%{summary}
 %description -n python3-scikit-build-core %_description
 
 %prep
-%autosetup -p1 -n scikit_build_core-%{version}
+%forgesetup -v
 
 %generate_buildrequires
 %pyproject_buildrequires -x test
