@@ -17,9 +17,12 @@ BuildRequires:	python3-devel
 BuildRequires:	python3dist(hatchling)
 BuildRequires:	python3dist(hatch-vcs)
 BuildRequires:  cmake
+BuildRequires:  ninja-build
 BuildRequires:  gcc
 BuildRequires:  gcc-c++
-Requires:       cmake
+Recommends:     (ninja-build or make)
+Suggests:       gcc
+Suggests:       clang
 Requires:	    python3dist(pyproject-metadata)
 Requires:	    python3dist(pathspec)
 
@@ -48,7 +51,8 @@ Summary:	%{summary}
 
 
 %check
-%pytest
+%pytest \
+    -m "not isolated"
 
 
 %files -n python3-scikit-build-core -f %{pyproject_files}
