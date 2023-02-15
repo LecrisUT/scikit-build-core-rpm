@@ -1,9 +1,8 @@
 # TODO: temporarily build from forgeurl
 %global forgeurl https://github.com/scikit-build/scikit-build-core
-%global branch main
 
 Name:		    python-scikit-build-core
-Version:	    0.1.6
+Version:	    0.2.0
 Release:        1%{?dist}
 Summary:	    Build backend for CMake based projects
 %forgemeta
